@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi Faktorial</title>
+    <style>
+        body{
+            margin: 100px;            
+            align-items: center;
+        }
+        .format{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="format">Masukkan Nilai n</span>
+        <input class="format" id="n" type="text">
+        <button class="format" id="cariN">Submit</button>
+        <span class="format" id="hasil"></span>
+    </div>
+    <script src="../js/faktorial.js"></script>
+    <script>
+        const tombol = document.getElementById('cariN');
+        const nilai = document.getElementById('n');
+        const hasil = document.getElementById('hasil');
+
+        tombol.addEventListener('click', function(){            
+            hasil.innerHTML = `Hasil Faktorial dari ${nilai.value} adalah ${faktorial(nilai.value)}`;
+        })
+
+    </script>
+</body>
+</html>
